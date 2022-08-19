@@ -68,7 +68,7 @@ services:
       org.label-schema.group: "monitoring"
 
   cadvisor:
-    image: gcr.io/cadvisor/cadvisor-arm64:v0.45.0-containerd-cri
+    image: gcr.io/cadvisor/cadvisor-arm64:v0.44.1-test-porterdavid
     container_name: cadvisor
     privileged: true
     devices:
@@ -78,6 +78,7 @@ services:
       - /var/run:/var/run:ro
       - /sys:/sys:ro
       - /var/lib/docker:/var/lib/docker:ro
+        /etc:/etc:ro
       #- /cgroup:/cgroup:ro #doesn't work on MacOS only for Linux
     restart: unless-stopped
     expose:
