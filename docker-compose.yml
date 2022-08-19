@@ -26,7 +26,7 @@ services:
     restart: unless-stopped
     expose:
       - 9090
-    networks:
+    networks: 
       - monitor-net
     labels:
       org.label-schema.group: "monitoring"
