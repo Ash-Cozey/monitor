@@ -68,7 +68,7 @@ services:
       org.label-schema.group: "monitoring"
 
   cadvisor:
-    image: gcr.io/cadvisor/cadvisor-arm64:v0.44.1-test-porterdavid
+    image: zcube/cadvisor
     container_name: cadvisor
     privileged: true
     devices:
