@@ -70,6 +70,7 @@ services:
   cadvisor:
     image: zcube/cadvisor
     container_name: cadvisor
+    user: root
     privileged: true
     devices:
       - /dev/kmsg:/dev/kmsg
